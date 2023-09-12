@@ -4,12 +4,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-class Coche {
+class CocheEnc {
     private String marca; // Atributo privado
     private int año; // Atributo privado
 
     // Constructor para inicializar la marca y el año
-    public Coche(String marca, int año) {
+    public CocheEnc(String marca, int año) {
         this.marca = marca;
         this.año = año;
     }
@@ -45,7 +45,7 @@ public class CarroControllerEnc {
 
     @GetMapping
     public String getCarro() {
-        Coche miCoche = new Coche("Toyota", 2022);
+        CocheEnc miCoche = new CocheEnc("Toyota", 2022);
 
         // Lla/mar al método arrancar
         return miCoche.arrancar();

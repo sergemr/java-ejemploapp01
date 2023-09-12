@@ -11,6 +11,9 @@ class Coche {
     String arrancar() {
         return "El auto está arrancando...";
     }
+        String getMarca() {
+        return "El auto :"+marca;
+    }
 }
 
 @RestController
@@ -24,6 +27,6 @@ public class CarroController {
         miCoche.año = 2022;
 
         // Lla/mar al método arrancar
-        return miCoche.arrancar();
+        return miCoche.getMarca();
     }
 }
