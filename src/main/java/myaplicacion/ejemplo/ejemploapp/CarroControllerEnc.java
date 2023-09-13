@@ -40,7 +40,7 @@ class CocheEnc {
 }
 
 @RestController
-@RequestMapping("/carro")
+@RequestMapping("/carroenc")
 public class CarroControllerEnc {
 
     @GetMapping
