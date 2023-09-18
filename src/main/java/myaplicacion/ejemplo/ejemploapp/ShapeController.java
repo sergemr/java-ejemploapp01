@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 public class ShapeController {
     // Clase base (superclase)
     class Figura {
-            String nombre;
+        String nombre;
+
         double area() {
             return 0.0;
         }
@@ -17,17 +18,18 @@ public class ShapeController {
     class Circulo extends Figura {
         double radio;
 
-        Circulo( String nombre,double radio) {
+        Circulo(String nombre, double radio) {
             this.radio = radio;
             this.nombre = nombre;
         }
 
         @Override
         double area() {
-            return  Math.PI * radio * radio;
-        } 
+            return Math.PI * radio * radio;
+        }
+
         String get() {
-            return ""+this.nombre + ""+ Math.PI * radio * radio;
+            return "" + this.nombre + "" + Math.PI * radio * radio;
         }
     }
 
@@ -46,7 +48,7 @@ public class ShapeController {
 
     @GetMapping("/circle")
     public String calculateCircleArea(@RequestParam double radius) {
-        Circulo circle = new Circulo(   "Mi Circulo",radius);
+        Circulo circle = new Circulo("Mi Circulo", radius);
         return circle.get();
     }
 

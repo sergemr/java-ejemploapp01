@@ -11,8 +11,9 @@ class Coche {
     String arrancar() {
         return "El auto está arrancando...";
     }
-        String getMarca() {
-        return "El auto :"+marca;
+
+    String getMarca() {
+        return "El auto :" + marca;
     }
 }
 
