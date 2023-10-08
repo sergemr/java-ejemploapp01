@@ -1,8 +1,20 @@
+# Informacion del Systema
+
+# Documentacion de Spring Boot
+
+https://code.visualstudio.com/docs/java/java-spring-boot
+
+# Documentacion de API RESTful con Spring Boot
+
+Para la documentación, Una vez inicializado este API accede a :
+
+http://127.0.0.1:8080/getSystemInfo
 
 # Temas grupos
+
 # Proyecto 1: Desarrollo de una API RESTful con Spring Boot
 
-Creación de el api para un block de notas 
+Creación de el api para un block de notas
 
 Requerimientos Funcionales:
 
@@ -43,11 +55,10 @@ Requerimientos No Funcionales:
 
 Garantizar que la API sea segura mediante prácticas de seguridad como el almacenamiento seguro de contraseñas y la prevención de ataques comunes, como la inyección SQL.
 Documentación:
- 
+
 ** bono ** Pruebas:
 
 Realizar pruebas unitarias y de integración para garantizar la calidad y estabilidad de la API.
-
 
 # Proyecto 2: JAVA ETL con Sprintboot.
 
@@ -101,4 +112,4 @@ Implementar herramientas de monitoreo para supervisar la salud y el rendimiento 
 
 Pruebas:
 
-Realizar pruebas unitarias, de integración y de rendimiento para garantizar la calidad y la estabilidad del sistema ETL. 
+Realizar pruebas unitarias, de integración y de rendimiento para garantizar la calidad y la estabilidad del sistema ETL.

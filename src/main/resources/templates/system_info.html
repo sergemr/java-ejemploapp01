@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>System Info</title>
+    <link rel="stylesheet" type="text/css" href="/css/swagger-style.css" />
+  </head>
+  <body>
+    <h1>System Information</h1>
+    <p th:text="${endpointInfo}"></p>
+
+    controller path "/ejemplo/ejemploapp/SystemInfoController.java"
+
+    <h1># Documentacion de API RESTful con Spring Boot</h1>
+    <p>https://code.visualstudio.com/docs/java/java-spring-boot</p>
+    <p>http://127.0.0.1:8080/getSystemInfo/</p>
+
+    <h1>Implementing Web Templates with Thymeleaf in Spring Boot</h1>
+
+    <ol>
+      <li>
+        <strong>Create a Spring Boot Project:</strong> Start by creating a new
+        Spring Boot project using your preferred IDE or the Spring Initializr.
+      </li>
+
+      <li>
+        <strong>Add Thymeleaf Dependency:</strong> In your project's
+        <code>pom.xml</code> (Maven) or <code>build.gradle</code> (Gradle), add
+        the Thymeleaf dependency:
+        <pre>
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+&lt;/dependency&gt;
+            </pre
+        >
+      </li>
+
+      <li>
+        <strong>Create Thymeleaf Templates:</strong> Create HTML templates using
+        Thymeleaf syntax. Place these templates in the
+        <code>src/main/resources/templates</code> directory. For example, create
+        a file named <code>example.html</code>:
+
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns:th="http://www.thymeleaf.org"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Thymeleaf Template&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to Thymeleaf&lt;/h1&gt;
+    &lt;p th:text="${message}"&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre
+        >
+      </li>
+
+      <li>
+        <strong>Create a Controller:</strong> Create a controller class that
+        maps to a URL and returns the Thymeleaf template. For example:
+        <pre>
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class ExampleController {
+
+    @GetMapping("/example")
+    public String example(Model model) {
+        model.addAttribute("message", "Hello, Thymeleaf!");
+        return "example";
+    }
+}
+            </pre
+        >
+      </li>
+
+      <li>
+        <strong>Configure View Resolver:</strong> Ensure that your Thymeleaf
+        template resolver and view resolver configurations are correctly set up
+        in your <code>application.properties</code> or
+        <code>application.yml</code>:
+
+        <pre>
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+            </pre
+        >
+      </li>
+
+      <li>
+        <strong>Create CSS Stylesheet:</strong> Create a CSS file named
+        <code>styles.css</code> and place it in the
+        <code>src/main/resources/static/css</code> directory. You can define
+        your custom styles in this file.
+      </li>
+
+      <li>
+        <strong>Link the CSS Stylesheet:</strong> Link the CSS file in your
+        Thymeleaf templates using the following line within the &lt;head&gt;
+        section:
+        <pre>
+&lt;link rel="stylesheet" type="text/css" href="/css/styles.css"&gt;
+            </pre
+        >
+      </li>
+
+      <li>
+        <strong>Start Your Application:</strong> Start your Spring Boot
+        application, and you can access the Thymeleaf template at the specified
+        URL, e.g., <code>http://localhost:8080/example</code>.
+      </li>
+    </ol>
+
+    <hr />
+
+    <h1>Controller Information Swagger-like Documentation</h1>
+
+    <h1>InfoController - Swagger-like Documentation</h1>
+
+    <h2>Endpoints</h2>
+    <table>
+      <tr>
+        <th>Endpoint</th>
+        <th>HTTP Method</th>
+        <th>Description</th>
+      </tr>
+      <!-- Endpoint: /getinfo/list -->
+      <tr>
+        <td>/getinfo/list</td>
+        <td>GET</td>
+        <td>Get the list of info items.</td>
+      </tr>
+      <!-- Endpoint: /getinfo/showlist -->
+      <tr>
+        <td>/getinfo/showlist</td>
+        <td>GET</td>
+        <td>Get the current list of info items.</td>
+      </tr>
+      <!-- Endpoint: /getinfo/list/add -->
+      <tr>
+        <td>/getinfo/list/add</td>
+        <td>POST</td>
+        <td>Add a member to the list.</td>
+      </tr>
+      <!-- Endpoint: /getinfo/list/remove -->
+      <tr>
+        <td>/getinfo/list/remove</td>
+        <td>POST</td>
+        <td>Remove a member from the list.</td>
+      </tr>
+      <!-- Endpoint: /getinfo/queue -->
+      <tr>
+        <td>/getinfo/queue</td>
+        <td>GET</td>
+        <td>Get the queue of info items.</td>
+      </tr>
+      <!-- Endpoint: /getinfo/queue/add -->
+      <tr>
+        <td>/getinfo/queue/add</td>
+        <td>POST</td>
+        <td>Add a member to the queue.</td>
+      </tr>
+      <!-- Endpoint: /getinfo/queue/remove -->
+      <tr>
+        <td>/getinfo/queue/remove</td>
+        <td>POST</td>
+        <td>Remove a member from the queue.</td>
+      </tr>
+    </table>
+
+    <h1>PrimitivesController - Swagger-like Documentation</h1>
+
+    <h2>Endpoints</h2>
+    <table>
+      <tr>
+        <th>Endpoint</th>
+        <th>HTTP Method</th>
+        <th>Description</th>
+      </tr>
+      <!-- Endpoint: /primitives/int -->
+      <tr>
+        <td>/primitives/int</td>
+        <td>GET</td>
+        <td>Get an integer example.</td>
+      </tr>
+      <!-- Endpoint: /primitives/double -->
+      <tr>
+        <td>/primitives/double</td>
+        <td>GET</td>
+        <td>Get a double example.</td>
+      </tr>
+      <!-- Endpoint: /primitives/boolean -->
+      <tr>
+        <td>/primitives/boolean</td>
+        <td>GET</td>
+        <td>Get a boolean example.</td>
+      </tr>
+      <!-- Endpoint: /primitives/char -->
+      <tr>
+        <td>/primitives/char</td>
+        <td>GET</td>
+        <td>Get a character example.</td>
+      </tr>
+      <!-- Endpoint: /primitives/string -->
+      <tr>
+        <td>/primitives/string</td>
+        <td>GET</td>
+        <td>Get a string example.</td>
+      </tr>
+    </table>
+  </body>
+</html>
