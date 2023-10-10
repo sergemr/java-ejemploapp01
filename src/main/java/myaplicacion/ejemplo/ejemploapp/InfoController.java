@@ -45,7 +45,7 @@ public class InfoController {
 
     // Add a member to the list
     @PostMapping("/list/add")
-    public void addMemberToList(String member) {
+    public List<String> addMemberToList(String member) {
         System.out.println("list" + member);
         // Create an instance of classInfo
         classInfo infoClass = new classInfo();
@@ -55,6 +55,8 @@ public class InfoController {
         infoClass.addMemberToList(member);
         // Add the member to infoClassS as well
         infoClassS.addMemberToList(member);
+        System.out.println("list" + infoClassS.getList());
+        return infoClassS.getList();
     }
 
     // Remove a member from the list
